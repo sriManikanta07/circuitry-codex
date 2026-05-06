@@ -332,7 +332,7 @@ function Index() {
                   ))}
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-5">
                   {p.bullets.map((b) => (
                     <li key={b} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
                       <span className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${
@@ -342,6 +342,27 @@ function Index() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-border/60">
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`group/btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md font-mono text-[11px] tracking-[0.2em] font-semibold gradient-cyber text-primary-foreground shadow-neu hover:scale-[1.04] transition`}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" /> SEE LIVE
+                    </a>
+                  )}
+                  <a
+                    href={p.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md font-mono text-[11px] tracking-[0.2em] bg-surface-elevated border border-border text-foreground hover:border-cyan/50 hover:text-cyan transition"
+                  >
+                    <Github className="w-3.5 h-3.5" /> GIT REPO
+                  </a>
+                </div>
               </article>
             ))}
           </div>
