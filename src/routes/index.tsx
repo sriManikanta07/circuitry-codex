@@ -4,6 +4,7 @@ import { DataStream } from "@/components/DataStream";
 import {
   ArrowDownToLine, Mail, Github, Linkedin, Cpu, Database, Code2,
   Braces, Atom, Server, Boxes, Sparkles, Activity, Terminal, ChevronRight,
+  ExternalLink,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -52,6 +53,8 @@ const projects = [
     sub: "Real-Time AI-Powered Chat Platform",
     stack: "MERN · Socket.io · LLM APIs",
     accent: "cyan" as const,
+    live: "https://sandesha.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Latency", v: "<120ms" },
       { k: "Uptime", v: "99.9%" },
@@ -68,6 +71,8 @@ const projects = [
     sub: "AI-Powered Public Health Assistant",
     stack: "LLM APIs · RAG · Node.js · Vector DB",
     accent: "magenta" as const,
+    live: null,
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Agents", v: "Multi" },
       { k: "Mode", v: "RAG" },
@@ -84,6 +89,8 @@ const projects = [
     sub: "Smart Code Review Engine",
     stack: "LLM APIs · RAG · Node.js · Vector DB",
     accent: "gold" as const,
+    live: null,
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Latency", v: "<2s" },
       { k: "Accuracy", v: ">95%" },
@@ -100,6 +107,8 @@ const projects = [
     sub: "Production Bakery Management (Freelance)",
     stack: "MERN · WhatsApp API · REST",
     accent: "cyan" as const,
+    live: "https://bakery-os.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Engagement", v: "+40%" },
       { k: "Manual ops", v: "−60%" },
@@ -116,6 +125,8 @@ const projects = [
     sub: "High-Performance Image Compression",
     stack: "MERN Stack",
     accent: "magenta" as const,
+    live: "https://compily.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Process", v: "<1s" },
       { k: "Reduction", v: "65–80%" },
