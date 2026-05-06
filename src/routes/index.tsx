@@ -10,13 +10,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sri Manikanta P — Systems Architect & Data Engineer" },
+      { title: "Sri Manikanta P — AI / Full-Stack Developer" },
       {
         name: "description",
         content:
-          "Cinematic portfolio of Sri Manikanta P — systems architect, full-stack & AI engineer building scalable APIs, real-time platforms, and LLM-powered products.",
+          "Cinematic portfolio of Sri Manikanta P — AI / Full-Stack developer building scalable APIs, real-time platforms, and LLM-powered products.",
       },
-      { property: "og:title", content: "Sri Manikanta P — Systems Architect & Data Engineer" },
+      { property: "og:title", content: "Sri Manikanta P — AI / Full-Stack Developer" },
       { property: "og:description", content: "Scalable systems · Real-time platforms · LLM/RAG engineering." },
       { property: "og:type", content: "website" },
     ],
@@ -199,9 +199,9 @@ function Index() {
             </div>
 
             <h1 className="font-mono text-[clamp(1.6rem,3.2vw,2.6rem)] leading-[1.15] font-bold tracking-tight">
-              <span className="text-gradient-cyber">SYSTEMS ARCHITECT</span>
-              <span className="text-foreground"> &amp; </span>
-              <span className="text-gradient-cyber">DATA ENGINEER</span>
+              <span className="text-gradient-cyber">AI</span>
+              <span className="text-foreground"> / </span>
+              <span className="text-gradient-cyber">FULL-STACK DEVELOPER</span>
               <span className="block mt-3 text-foreground/90">| SRI MANIKANTA P</span>
             </h1>
 
