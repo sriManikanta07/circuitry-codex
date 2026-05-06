@@ -4,6 +4,7 @@ import { DataStream } from "@/components/DataStream";
 import {
   ArrowDownToLine, Mail, Github, Linkedin, Cpu, Database, Code2,
   Braces, Atom, Server, Boxes, Sparkles, Activity, Terminal, ChevronRight,
+  ExternalLink,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -52,6 +53,8 @@ const projects = [
     sub: "Real-Time AI-Powered Chat Platform",
     stack: "MERN · Socket.io · LLM APIs",
     accent: "cyan" as const,
+    live: "https://sandesha.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Latency", v: "<120ms" },
       { k: "Uptime", v: "99.9%" },
@@ -68,6 +71,8 @@ const projects = [
     sub: "AI-Powered Public Health Assistant",
     stack: "LLM APIs · RAG · Node.js · Vector DB",
     accent: "magenta" as const,
+    live: null,
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Agents", v: "Multi" },
       { k: "Mode", v: "RAG" },
@@ -84,6 +89,8 @@ const projects = [
     sub: "Smart Code Review Engine",
     stack: "LLM APIs · RAG · Node.js · Vector DB",
     accent: "gold" as const,
+    live: null,
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Latency", v: "<2s" },
       { k: "Accuracy", v: ">95%" },
@@ -100,6 +107,8 @@ const projects = [
     sub: "Production Bakery Management (Freelance)",
     stack: "MERN · WhatsApp API · REST",
     accent: "cyan" as const,
+    live: "https://bakery-os.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Engagement", v: "+40%" },
       { k: "Manual ops", v: "−60%" },
@@ -116,6 +125,8 @@ const projects = [
     sub: "High-Performance Image Compression",
     stack: "MERN Stack",
     accent: "magenta" as const,
+    live: "https://compily.live",
+    repo: "https://github.com/p-sri-manikanta",
     metrics: [
       { k: "Process", v: "<1s" },
       { k: "Reduction", v: "65–80%" },
@@ -321,7 +332,7 @@ function Index() {
                   ))}
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-5">
                   {p.bullets.map((b) => (
                     <li key={b} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
                       <span className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${
@@ -331,6 +342,27 @@ function Index() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-border/60">
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`group/btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md font-mono text-[11px] tracking-[0.2em] font-semibold gradient-cyber text-primary-foreground shadow-neu hover:scale-[1.04] transition`}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" /> SEE LIVE
+                    </a>
+                  )}
+                  <a
+                    href={p.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md font-mono text-[11px] tracking-[0.2em] bg-surface-elevated border border-border text-foreground hover:border-cyan/50 hover:text-cyan transition"
+                  >
+                    <Github className="w-3.5 h-3.5" /> GIT REPO
+                  </a>
+                </div>
               </article>
             ))}
           </div>
