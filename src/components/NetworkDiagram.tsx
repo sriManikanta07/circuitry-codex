@@ -12,10 +12,11 @@ export function NetworkDiagram() {
   const ref = useRef<SVGSVGElement | null>(null);
 
   // Generate ring nodes
+  const r3 = (n: number) => Math.round(n * 1000) / 1000;
   const ring = (count: number, radius: number, phase = 0) =>
     Array.from({ length: count }, (_, i) => {
       const a = (i / count) * Math.PI * 2 + phase;
-      return { x: 250 + Math.cos(a) * radius, y: 250 + Math.sin(a) * radius };
+      return { x: r3(250 + Math.cos(a) * radius), y: r3(250 + Math.sin(a) * radius) };
     });
 
   const outer = ring(14, 215);
