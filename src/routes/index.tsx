@@ -73,6 +73,7 @@ const projects = [
     repo: "https://github.com/p-sri-manikanta/chat_app",
     metrics: [
       { k: "Latency", v: "<120ms" },
+      
       { k: "Uptime", v: "99.9%" },
       { k: "Concurrent", v: "500+" },
     ],

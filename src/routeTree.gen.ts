@@ -60,7 +60,7 @@ export const routeTree = rootRouteImport
 
 import type { getRouter } from './router.tsx'
 import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
+declare module 'react-router-dom' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
