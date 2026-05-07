@@ -2,8 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NetworkDiagram } from "@/components/NetworkDiagram";
 import { DataStream } from "@/components/DataStream";
 import {
-  ArrowDownToLine, Mail, Github, Linkedin, Cpu, Database, Code2,
-  Braces, Atom, Server, Boxes, Sparkles, Activity, Terminal, ChevronRight,
+  ArrowDownToLine,
+  Mail,
+  Github,
+  Linkedin,
+  Cpu,
+  Database,
+  Code2,
+  Braces,
+  Atom,
+  Server,
+  Boxes,
+  Sparkles,
+  Activity,
+  Terminal,
+  ChevronRight,
   ExternalLink,
 } from "lucide-react";
 
@@ -18,7 +31,10 @@ export const Route = createFileRoute("/")({
           "Cinematic portfolio of Sri Manikanta P — AI / Full-Stack developer building scalable APIs, real-time platforms, and LLM-powered products.",
       },
       { property: "og:title", content: "Sri Manikanta P — AI / Full-Stack Developer" },
-      { property: "og:description", content: "Scalable systems · Real-time platforms · LLM/RAG engineering." },
+      {
+        property: "og:description",
+        content: "Scalable systems · Real-time platforms · LLM/RAG engineering.",
+      },
       { property: "og:type", content: "website" },
     ],
     links: [
@@ -53,8 +69,8 @@ const projects = [
     sub: "Real-Time AI-Powered Chat Platform",
     stack: "MERN · Socket.io · LLM APIs",
     accent: "cyan" as const,
-    live: "https://sandesha.live",
-    repo: "https://github.com/p-sri-manikanta",
+    live: "https://chat-app-frontend-op3h.onrender.com",
+    repo: "https://github.com/p-sri-manikanta/chat_app",
     metrics: [
       { k: "Latency", v: "<120ms" },
       { k: "Uptime", v: "99.9%" },
@@ -103,12 +119,12 @@ const projects = [
   },
   {
     tag: "PRJ.04",
-    name: "BAKERY OS",
+    name: "Bakes OF GOOD",
     sub: "Production Bakery Management (Freelance)",
     stack: "MERN · WhatsApp API · REST",
     accent: "cyan" as const,
-    live: "https://bakery-os.live",
-    repo: "https://github.com/p-sri-manikanta",
+    live: "https://bakesofgood.netlify.app",
+    repo: "https://github.com/p-sri-manikanta/sweet-order-system",
     metrics: [
       { k: "Engagement", v: "+40%" },
       { k: "Manual ops", v: "−60%" },
@@ -125,8 +141,8 @@ const projects = [
     sub: "High-Performance Image Compression",
     stack: "MERN Stack",
     accent: "magenta" as const,
-    live: "https://compily.live",
-    repo: "https://github.com/p-sri-manikanta",
+    live: "https://image-compressor-pro-cracked.netlify.app/",
+    repo: "https://github.com/p-sri-manikanta/Compify",
     metrics: [
       { k: "Process", v: "<1s" },
       { k: "Reduction", v: "65–80%" },
@@ -160,8 +176,8 @@ const borderClass = (a: "cyan" | "magenta" | "gold") =>
   a === "cyan"
     ? "border-[oklch(0.85_0.18_200/0.4)]"
     : a === "magenta"
-    ? "border-[oklch(0.70_0.28_340/0.4)]"
-    : "border-[oklch(0.85_0.16_90/0.4)]";
+      ? "border-[oklch(0.70_0.28_340/0.4)]"
+      : "border-[oklch(0.85_0.16_90/0.4)]";
 
 function SectionLabel({ id, label }: { id: string; label: string }) {
   return (
@@ -181,14 +197,25 @@ function Index() {
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="font-mono text-sm tracking-[0.3em] text-gradient-cyber font-bold">
-            ⌘ S.MANIKANTA
+          <a
+            href="#top"
+            className="font-mono text-sm tracking-[0.3em] text-gradient-cyber font-bold"
+          >
+            {`<S_MK/>`}
           </a>
           <nav className="hidden md:flex gap-8 font-mono text-xs tracking-[0.25em] text-muted-foreground">
-            <a href="#experience" className="hover:text-cyan transition-colors">EXPERIENCE</a>
-            <a href="#projects" className="hover:text-cyan transition-colors">PROJECTS</a>
-            <a href="#stack" className="hover:text-cyan transition-colors">STACK</a>
-            <a href="#contact" className="hover:text-cyan transition-colors">CONTACT</a>
+            <a href="#experience" className="hover:text-cyan transition-colors">
+              EXPERIENCE
+            </a>
+            <a href="#projects" className="hover:text-cyan transition-colors">
+              PROJECTS
+            </a>
+            <a href="#stack" className="hover:text-cyan transition-colors">
+              STACK
+            </a>
+            <a href="#contact" className="hover:text-cyan transition-colors">
+              CONTACT
+            </a>
           </nav>
           <a
             href="/SriManikanta_Resume.pdf"
@@ -217,9 +244,10 @@ function Index() {
             </h1>
 
             <p className="text-muted-foreground max-w-xl text-base leading-relaxed">
-              I architect distributed systems, real-time platforms and LLM-powered products —
-              shipping MERN, AI/RAG and infrastructure that scales from 100 to 1000+ users
-              without breaking a sweat.
+              I am a Computer Science student and AI Research Intern specializing in building
+              scalable MERN stack and LLM-powered applications. I focus on engineering
+              high-performance, real-time systems designed to scale for over 1,000+ concurrent users
+              while maintaining low-latency infrastructure.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -227,7 +255,8 @@ function Index() {
                 href="#projects"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg gradient-cyber text-primary-foreground font-mono text-sm tracking-wider font-semibold shadow-neu glow-cyan transition hover:scale-[1.02]"
               >
-                EXPLORE.MODULES <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                EXPLORE.MODULES{" "}
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </a>
               <a
                 href="#contact"
@@ -272,7 +301,9 @@ function Index() {
                 {e.tag}
               </div>
               <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <h3 className={`font-display text-2xl font-bold ${accentClass(e.accent)}`}>{e.role}</h3>
+                <h3 className={`font-display text-2xl font-bold ${accentClass(e.accent)}`}>
+                  {e.role}
+                </h3>
                 <span className="text-foreground/80">@ {e.org}</span>
                 <span className="font-mono text-xs text-muted-foreground ml-auto">{e.period}</span>
               </div>
@@ -323,8 +354,13 @@ function Index() {
 
                 <div className="grid grid-cols-3 gap-2 mb-4">
                   {p.metrics.map((m) => (
-                    <div key={m.k} className="rounded-md bg-background/50 border border-border p-2 text-center">
-                      <div className={`font-mono text-sm font-bold ${accentClass(p.accent)}`}>{m.v}</div>
+                    <div
+                      key={m.k}
+                      className="rounded-md bg-background/50 border border-border p-2 text-center"
+                    >
+                      <div className={`font-mono text-sm font-bold ${accentClass(p.accent)}`}>
+                        {m.v}
+                      </div>
                       <div className="font-mono text-[9px] tracking-[0.2em] text-muted-foreground mt-0.5">
                         {m.k.toUpperCase()}
                       </div>
@@ -334,10 +370,19 @@ function Index() {
 
                 <ul className="space-y-2 mb-5">
                   {p.bullets.map((b) => (
-                    <li key={b} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
-                      <span className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${
-                        p.accent === "cyan" ? "bg-cyan" : p.accent === "magenta" ? "bg-magenta" : "bg-gold"
-                      }`} />
+                    <li
+                      key={b}
+                      className="flex gap-2 text-sm text-muted-foreground leading-relaxed"
+                    >
+                      <span
+                        className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${
+                          p.accent === "cyan"
+                            ? "bg-cyan"
+                            : p.accent === "magenta"
+                              ? "bg-magenta"
+                              : "bg-gold"
+                        }`}
+                      />
                       <span>{b}</span>
                     </li>
                   ))}
@@ -385,9 +430,13 @@ function Index() {
                 <div
                   key={s.label}
                   className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-surface-elevated border border-border shadow-neu transition hover:border-cyan/40"
-                  style={{ animation: `pulse-glow ${2 + (i % 4) * 0.5}s ease-in-out ${i * 0.15}s infinite` }}
+                  style={{
+                    animation: `pulse-glow ${2 + (i % 4) * 0.5}s ease-in-out ${i * 0.15}s infinite`,
+                  }}
                 >
-                  <Icon className={`w-8 h-8 ${accentClass(color)} drop-shadow-[0_0_8px_currentColor]`} />
+                  <Icon
+                    className={`w-8 h-8 ${accentClass(color)} drop-shadow-[0_0_8px_currentColor]`}
+                  />
                   <div className="font-mono text-[11px] tracking-[0.2em] text-foreground/80">
                     {s.label.toUpperCase()}
                   </div>
@@ -408,8 +457,8 @@ function Index() {
               <span className="text-gradient-cyber">Let&apos;s build the next system.</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-10">
-              Open to internships, collaborations and ambitious engineering problems.
-              Drop a signal — response time &lt; 24h.
+              Open to internships, collaborations and ambitious engineering problems. Drop a signal
+              — response time &lt; 24h.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -431,14 +480,16 @@ function Index() {
             <div className="flex justify-center gap-3 font-mono text-xs">
               <a
                 href="https://linkedin.com/in/p-sri-manikanta"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-cyan/40 hover:text-cyan transition"
               >
                 <Linkedin className="w-4 h-4" /> LINKEDIN
               </a>
               <a
                 href="https://github.com/"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-magenta/40 hover:text-magenta transition"
               >
                 <Github className="w-4 h-4" /> GITHUB
