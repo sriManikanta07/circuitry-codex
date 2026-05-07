@@ -12,10 +12,11 @@ export function NetworkDiagram() {
   const ref = useRef<SVGSVGElement | null>(null);
 
   // Generate ring nodes
+  const r3 = (n: number) => Math.round(n * 1000) / 1000;
   const ring = (count: number, radius: number, phase = 0) =>
     Array.from({ length: count }, (_, i) => {
       const a = (i / count) * Math.PI * 2 + phase;
-      return { x: 250 + Math.cos(a) * radius, y: 250 + Math.sin(a) * radius };
+      return { x: r3(250 + Math.cos(a) * radius), y: r3(250 + Math.sin(a) * radius) };
     });
 
   const outer = ring(14, 215);
@@ -78,10 +79,10 @@ export function NetworkDiagram() {
           {/* Tick marks */}
           {Array.from({ length: 48 }).map((_, i) => {
             const a = (i / 48) * Math.PI * 2;
-            const x1 = 250 + Math.cos(a) * 222;
-            const y1 = 250 + Math.sin(a) * 222;
-            const x2 = 250 + Math.cos(a) * 230;
-            const y2 = 250 + Math.sin(a) * 230;
+            const x1 = r3(250 + Math.cos(a) * 222);
+            const y1 = r3(250 + Math.sin(a) * 222);
+            const x2 = r3(250 + Math.cos(a) * 230);
+            const y2 = r3(250 + Math.sin(a) * 230);
             return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--cyan)" strokeOpacity={i % 4 === 0 ? 0.6 : 0.2} strokeWidth="1" />;
           })}
           {/* Outer node connections */}
